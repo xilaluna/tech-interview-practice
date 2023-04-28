@@ -8,5 +8,22 @@ def isPalindromeRecursive(string):
     return isPalindromeRecursive(string[1:-1])
 
 
-print(isPalindromeRecursive('raceca'))
-print(isPalindromeRecursive('raceca'))
+# print(isPalindromeRecursive('raceca'))
+# print(isPalindromeRecursive('raceca'))
+
+def isPalindrome(string):
+    left, right = 0, len(string) - 1
+
+    while left < right:
+
+        if string[left] != string[right]:
+            return False
+
+        left += 1
+        right -= 1
+
+    return True
+
+
+print(isPalindrome("racca"))
+print(isPalindrome("racecar"))
